@@ -1,0 +1,122 @@
+.flex-container{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* Scrollbar */
+
+.screen {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #121212;
+  flex-direction: column;
+}
+
+/* Button and h1 animations for the front page and other pages to come */
+h1{
+  color:#808080 !important;
+  animation: fadein 2s ease ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family:'Quicksand', sans-serif;
+}
+
+button{
+  animation: fadein 2s ease ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family:'Quicksand', sans-serif;
+}
+
+
+.text-container{
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+p {
+  color:#808080;
+  animation: fadein 2s ease ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family:'Quicksand', sans-serif;
+  font-size: 1vw;
+}
+
+.fancy-btn{
+  color:#808080;
+  text-decoration: none;
+  background: none;
+  border: none; 
+  font-family:'Quicksand', sans-serif;
+  margin-top: 3px;
+}
+
+.fade{
+  animation: fadein 2s ease ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.dark-card{
+  width: 18rem; 
+  background-color: #121212 !important;
+  border: none !important;
+}
+
+.input{
+  background-color: #121212 !important;
+  border-color: #808080 !important;
+  border-radius: 5px;
+}
+
+.form-label{
+  color:#808080;
+  border: none;
+}
+
+.text-area{
+  position: relative;
+  border-radius: 5px !important;
+  width: 100% !important;
+}
+
+::placeholder{
+  color: #535353 !important;
+}
+@keyframes fadein{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity:1;
+  }
+}
