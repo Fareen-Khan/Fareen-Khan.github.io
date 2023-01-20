@@ -1,94 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <title>About me</title>
-  <link href="styles.css" type="text/css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-</head>
-<body class="screen">
-  <!-- Nav Bar section -->
-  <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #121212; font-family: 'Quicksand', sans-serif;">
-    <a class="navbar-brand mb-0 h1" href="/" style="padding-left: 10px;">
-      Fareen
-    </a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a href="./aboutme" class="nav-link">
-            About Me
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a href="./projects" class="nav-link">
-            Projects
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a href="./contact" class="nav-link">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- Nav Bar section -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <title>About me</title>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="screen">
+    <!-- Nav Bar section -->
+    <nav
+      class="navbar navbar-dark navbar-expand-lg"
+      style="background-color: #121212; font-family: 'Quicksand', sans-serif"
+    >
+      <a class="navbar-brand mb-0 h1" href="/" style="padding-left: 10px">
+        Fareen
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a href="./aboutme" class="nav-link"> About Me </a>
+          </li>
+          <li class="nav-item active">
+            <a href="./projects" class="nav-link"> Projects </a>
+          </li>
+          <li class="nav-item active">
+            <a href="./contact" class="nav-link"> Contact </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Nav Bar section -->
 
-  <div class="flex-container">
-    <h1>About me</h1>
-    <div class="text-container">
-      <p>Hey! My name's Fareen a third year software engineering student at Toronto Metropolitan University.</p>
-      <p>I started to code in Python on whim. I develeoped some simple algorithms and eventually made a web scraping bot on Discord. I have since decided to learn Javascript, web development and software development.</p>
-      <p>Check out some of my <a href="./projects" style="text-decoration: none; color: #808080;">projects</a>!😁</p>
-    </div>
-    <br>
-    <div class="container text-left" style="max-width: 40vw; padding: 0%;">
-      <div class="row flex-nowrap row-cols-auto">
-        <div class="col">
-          <p>Languages</p>
+    <div class="flex-container">
+      <h1>About me</h1>
+      <div class="text-container">
+        <p>
+          Hey! My name's Fareen a third year software engineering student at
+          Toronto Metropolitan University.
+        </p>
+        <p>
+          I started to code in Python on whim. I develeoped some simple
+          algorithms and eventually made a web scraping bot on Discord. I have
+          since decided to learn Javascript, web development and software
+          development.
+        </p>
+        <p>
+          Check out some of my
+          <a href="./projects" style="text-decoration: none; color: #808080"
+            >projects</a
+          >!😁
+        </p>
+      </div>
+      <br />
+      <div class="container text-left" style="max-width: 40vw; padding: 0%">
+        <div class="row flex-nowrap row-cols-auto">
+          <div class="col">
+            <p>Languages</p>
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\js.png"
+              alt="Javascript"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\java.png"
+              alt="Java"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\c.png"
+              alt="C"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\python.png"
+              alt="Python"
+              width="25vw"
+            />
+          </div>
         </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\js.png" alt="Javascript" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\java.png" alt="Java" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\c.png" alt="C" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\python.png" alt="Python" width="25vw">
+        <div class="row flex-nowrap row-cols-auto">
+          <div class="col">
+            <p>Technologies</p>
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\reactnative.png"
+              alt="React Native"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\expo.png"
+              alt="Expo"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\git.png"
+              alt="Git"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\nodejs.png"
+              alt="NodeJS"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\bootstrap.png"
+              alt="Bootstrap"
+              width="25vw"
+            />
+          </div>
+          <div class="col icons">
+            <img
+              class="fade img-fluid rounded "
+              src="assests\imgs\mongodb.png"
+              alt="Mongodb"
+              width="25vw"
+            />
+          </div>
         </div>
       </div>
-      <div class="row flex-nowrap row-cols-auto">
-        <div class="col">
-          <p>Technologies</p>
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\reactnative.png" alt="React Native" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\expo.png" alt="Expo" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\git.png" alt="Git" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\nodejs.png" alt="NodeJS" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\bootstrap.png" alt="Bootstrap" width="25vw">
-        </div>
-        <div class="col">
-          <img class="fade" src="assests\imgs\mongodb.png" alt="Mongodb" width="25vw">
-        </div>
-      </div>
     </div>
-  </div>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

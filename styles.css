@@ -87,9 +87,9 @@ p {
 }
 
 .dark-card{
-  width: 18rem; 
-  background-color: #121212 !important;
-  border: none !important;
+  background-color: #101010 !important;
+  border: none;
+  margin:0 1vw 0 1vw;
 }
 
 .input{
@@ -119,4 +119,64 @@ p {
   to{
     opacity:1;
   }
+}
+
+.song-text{
+  color:#808080 !important;
+  animation: fadein 2s ease ;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-size: small;
+  font-family:'Quicksand', sans-serif;
+  font-style: italic;
+}
+
+.toggle{
+  position: absolute;
+  top:0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.toggle .bar{
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width:400px){
+  .toggle{
+    display: flex;
+  }
+
+  .nav-link{
+    display: none;
+  }
+}
+
+.card-img-sizing{
+  float: right;
+  height: auto!important;
+  object-fit: contain;
+  margin-top: 1vw;
+}
+
+#now-playing  {
+  transition: transform 1s;
+}
+#now-playing:hover{
+  transform: scale(1.05);
+}
+
+.icons{
+  transition: transform 1s;
+}
+
+.icons:hover{
+  transform: scale(1.25);
 }
