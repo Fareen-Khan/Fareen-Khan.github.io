@@ -29,6 +29,7 @@
       console.log(data)
       if (data.status){
         $("#status").text("Sorry I ran into an error I will fix it ASAP!!!");
+        $("#now-playing").attr("hidden","hidden");
         console.log("error");
       }
       else if  (data.item.isPlaying) {
