@@ -23,13 +23,15 @@
   <script>
   let track = { artist: "", title: "", album: "", img: "", playing: false };
   function myFunction() {
-  fetch(
-    "https://beta-api.stats.fm/api/v1/users/mcstar123/streams/current"
-  )
+    fetch("https://beta-api.stats.fm/api/v1/users/mcstar123/streams/current")
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
-      if  (data.item.isPlaying) {
+      if (data.status){
+        $("#status").text("Sorry I ran into an error I will fix it ASAP!!!");
+        console.log("error");
+      }
+      else if  (data.item.isPlaying) {
       track.artist = data.item.track.artists[0].name
       track.album = data.item.track.albums[0].name
       track.img = data.item.track.albums[0].image
@@ -39,7 +41,7 @@
       $( "#trackartist" ).html('by ' + track.artist);
       $( "#trackalbum" ).html('on ' + track.album);
       $( "#trackimg" ).attr("src",track.img);
-      $("#recentText").text("Listening to: ");
+      $("#status").text("Listening to: ");
       $( "#now-playing" ).removeAttr("hidden");
       }
       else{
@@ -55,12 +57,12 @@
           $( "#trackartist" ).html('by ' + track.artist);
           $( "#trackalbum" ).html('on ' + track.album);
           $( "#trackimg" ).attr("src",track.img);
-          $("#recentText").text("Recently Played: ");
+          $("#status").text("Recently Played: ");
           $( "#now-playing" ).removeAttr("hidden");
         })
       }
     });
-  }
+  } 
   myFunction()
     setInterval(function(){
       console.log('updated')
@@ -102,7 +104,7 @@
       </form>
       <br>
       <div id="scopeIn"> 
-        <span id="recentText" class="song-title">Staus</span>
+        <span id="status" class="song-title"></span>
         <div id="now-playing" hidden="hidden" style="display: flex; padding: 10px 2px 10px 2px;" onclick="redirect()">
           <img id="trackimg" src="https://i.imgur.com/xaGw1Df.jpeg" height="65vh" style="border-radius: 10%;margin-right:10px"></img>
           <div style="display: flex; justify-content: center;  flex-direction: column;" class="song-box">
