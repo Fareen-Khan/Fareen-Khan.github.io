@@ -12,7 +12,6 @@
       crossorigin="anonymous"
     />
     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,30 +21,11 @@
   </head>
   <script>
   let track = { artist: "", title: "", album: "", img: "", playing: false };
-  function myFunction() {
-    fetch("https://beta-api.stats.fm/api/v1/users/mcstar123/streams/current")
+  async function myFunction() {
+    let musicResponse = await fetch("https://beta-api.stats.fm/api/v1/users/mcstar123/streams/current")
     .then((response) => response.json())
-    .then((data) => {
-      console.log(data)
-      if (data.status){
-        $("#status").text("Sorry I ran into an error I will fix it ASAP!!!");
-        $("#now-playing").attr("hidden","hidden");
-        console.log("error");
-      }
-      else if  (data.item.isPlaying) {
-      track.artist = data.item.track.artists[0].name
-      track.album = data.item.track.albums[0].name
-      track.img = data.item.track.albums[0].image
-      track.title = data.item.track.name 
-      track.link = "https://open.spotify.com/track/" + data.item.track.externalIds.spotify[0]
-      $( "#tracktitle" ).html(track.title);
-      $( "#trackartist" ).html('by ' + track.artist);
-      $( "#trackalbum" ).html('on ' + track.album);
-      $( "#trackimg" ).attr("src",track.img);
-      $("#status").text("Listening to: ");
-      $( "#now-playing" ).removeAttr("hidden");
-      }
-      else{
+    .then((data) => {return data});
+    if (musicResponse.status === 404) {
         fetch("https://beta-api.stats.fm/api/v1/users/mcstar123/streams/recent")
         .then((response)=>response.json())
         .then((data)=>{
@@ -61,12 +41,23 @@
           $("#status").text("Recently Played: ");
           $( "#now-playing" ).removeAttr("hidden");
         })
-      }
-    });
+    }
+    else{
+        track.artist = musicResponse.item.track.artists[0].name
+        track.album = musicResponse.item.track.albums[0].name
+        track.img = musicResponse.item.track.albums[0].image
+        track.title = musicResponse.item.track.name 
+        track.link = "https://open.spotify.com/track/" + musicResponse.item.track.externalIds.spotify[0]
+        $( "#tracktitle" ).html(track.title);
+        $( "#trackartist" ).html('by ' + track.artist);
+        $( "#trackalbum" ).html('on ' + track.album);
+        $( "#trackimg" ).attr("src",track.img);
+        $("#status").text("Listening to: ");
+        $( "#now-playing" ).removeAttr("hidden");
+    }
   } 
   myFunction()
     setInterval(function(){
-      console.log('updated')
       myFunction()
   }, 30000)
 
@@ -77,7 +68,7 @@
   }
   </script>
 
-  <body class="screen" onload="spotify();">
+  <body class="screen">
     <div class="flex-container">
       <h1>Fareen Khan</h1>
       <form>
