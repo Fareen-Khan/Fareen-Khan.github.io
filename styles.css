@@ -159,6 +159,10 @@ p {
   border-radius: 10px;
 }
 
+.card-body h5{
+  color: #808080;
+}
+
 @media (max-width:400px){
   .toggle{
     display: flex;
@@ -170,10 +174,26 @@ p {
 }
 
 .card-img-sizing{
-  float: right;
-  height: auto!important;
-  object-fit: contain;
   margin-top: 1vw;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.row-size{
+  display: flex;
+  width: 80%!important;
+  justify-content: center;
+}
+
+.card-size{
+  display: flex;
+}
+
+.pfp-img-sizing{
+  aspect-ratio: 1/1;
+  max-width: 15%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 #scopeIn  {
