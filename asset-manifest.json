@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Fareen-Khan.github.io/static/css/main.816a22c5.css",
+    "main.js": "/Fareen-Khan.github.io/static/js/main.eb397c60.js",
+    "static/media/reactnative.png": "/Fareen-Khan.github.io/static/media/reactnative.8a6fc0a24a800d1e0f4a.png",
+    "static/media/python.png": "/Fareen-Khan.github.io/static/media/python.82efb64f8698a267f8bf.png",
+    "static/media/bootstrap.png": "/Fareen-Khan.github.io/static/media/bootstrap.430491e6a02f91bf55d6.png",
+    "static/media/c.png": "/Fareen-Khan.github.io/static/media/c.e01ad20e2109a9e61657.png",
+    "static/media/expo.png": "/Fareen-Khan.github.io/static/media/expo.d77025bfcc4531e2fe87.png",
+    "static/media/swift.png": "/Fareen-Khan.github.io/static/media/swift.b09241f82dd59f4a2811.png",
+    "static/media/nodejs.png": "/Fareen-Khan.github.io/static/media/nodejs.1fac080eeec0a547c743.png",
+    "static/media/java.png": "/Fareen-Khan.github.io/static/media/java.b9cf32c2c5f092cb81e5.png",
+    "static/media/js.png": "/Fareen-Khan.github.io/static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "/Fareen-Khan.github.io/index.html",
+    "main.816a22c5.css.map": "/Fareen-Khan.github.io/static/css/main.816a22c5.css.map",
+    "main.eb397c60.js.map": "/Fareen-Khan.github.io/static/js/main.eb397c60.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.816a22c5.css",
+    "static/js/main.eb397c60.js"
+  ]
+}
